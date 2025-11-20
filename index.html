@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Islam Muhammad AlAwar — Front-End Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Islam M. Alawar</a>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi, I’m Islam — Front-End Developer</h1>
+          <p class="lead">
+            I build clean, responsive interfaces using HTML, CSS and JavaScript.
+            Currently learning advanced front-end patterns and working on real projects to grow my portfolio.
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+
+          <ul class="hero-meta">
+            <li><strong>Location:</strong> Palestine</li>
+            <li><strong>Role:</strong> Front-End Developer (Learner & Freelancer)</li>
+            <li><strong>Stack:</strong> HTML · CSS · JavaScript · Git</li>
+          </ul>
+        </div>
+
+        <div class="hero-card">
+          <!-- Use uploaded image path here -->
+          <img class="avatar" src="avatar.png" alt="Islam M. AlAwar">
+          <h3>Islam M. Alawar</h3>
+          <p class="muted">Front-End Developer • Computer Science Student</p>
+          <div class="card-actions">
+            <a class="btn small" href="#projects">Portfolio</a>
+            <a class="btn small ghost" href="https://github.com/islamalaw3r" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <p class="muted">Technologies and tools I use frequently</p>
+        <div class="skills-grid">
+          <div class="skill">
+            <h3>HTML</h3>
+            <p>Semantic, accessible markup, forms and SEO basics</p>
+          </div>
+          <div class="skill">
+            <h3>CSS</h3>
+            <p>Flexbox, Grid, responsive layouts, transitions</p>
+          </div>
+          <div class="skill">
+            <h3>JavaScript</h3>
+            <p>DOM manipulation, events, localStorage</p>
+          </div>
+          <div class="skill">
+            <h3>Git & GitHub</h3>
+            <p>Version control, repositories, GitHub Pages</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <p class="muted">Selected projects — click to preview or view source</p>
+
+        <div class="projects-grid">
+          <!-- Notes App (your main project) -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Notes App</h3>
+              <p class="muted">HTML · CSS · JavaScript · LocalStorage</p>
+            </div>
+            <p>Simple and responsive notes application that saves notes to the browser using LocalStorage. Features add/edit/delete and clear all.</p>
+            <div class="project-actions">
+              <a class="btn small" href="#notes-demo" id="openNotes">Open Demo</a>
+              <a class="btn small ghost" href="https://github.com/islamalaw3r/notes-app" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+
+          <!-- Example: Restaurant Management (JavaFX) -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Restaurant Management System</h3>
+              <p class="muted">Java · JavaFX · MySQL</p>
+            </div>
+            <p>Desktop application built with JavaFX, supports orders, menu management and simple reporting.</p>
+            <div class="project-actions">
+              <a class="btn small" href="https://github.com/islamalaw3r/Restaurant-Management-System-JavaFX" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTES DEMO (embedded simple demo view) -->
+    <section id="notes-demo" class="section">
+      <div class="container">
+        <h2>Notes App — Live Demo</h2>
+        <p class="muted">Try the app below — notes are saved in your browser (localStorage).</p>
+
+        <div class="notes-demo">
+          <div class="input-row">
+            <input id="demoNoteInput" type="text" placeholder="Write your note..." aria-label="Note input">
+            <button id="demoAddBtn" class="btn">Add</button>
+            <button id="demoClearBtn" class="btn ghost">Clear All</button>
+          </div>
+
+          <p id="demoEmptyMsg" class="muted">No notes yet.</p>
+          <ul id="demoNotesList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I'm a Computer Science student and a Front-End developer in training. I enjoy building interfaces,
+          learning new web technologies, and turning small ideas into working projects.
+        </p>
+        <p class="muted">
+          Currently studying HTML, CSS and JavaScript, and working on projects to build my portfolio. I am open to freelance work and small collaborations.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="muted">Send me a short message — it will be saved locally for demonstration.</p>
+
+        <form id="contactForm" class="contact-form">
+          <div class="field-row">
+            <input id="nameInput" type="text" placeholder="Your name" required>
+            <input id="emailInput" type="email" placeholder="Your email">
+          </div>
+          <textarea id="messageInput" rows="5" placeholder="Your message" required></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send Message</button>
+            <button type="button" id="clearMessages" class="btn ghost">Clear Messages</button>
+          </div>
+          <p id="contactFeedback" class="muted" style="display:none;"></p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Islam Alawar — Front-End Developer</p>
+      <p class="muted">View source on <a href="https://github.com/islamalaw3r" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

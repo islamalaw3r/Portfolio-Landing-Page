@@ -1,0 +1,163 @@
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --primary: #0077ff;
+  --muted: #6b7280;
+  --max-width: 1100px;
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* container */
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* Header */
+.site-header{
+  background:var(--card);
+  border-bottom:1px solid #e6eef8;
+  position:sticky;
+  top:0;
+  z-index:30;
+}
+.header-inner{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+}
+.brand{
+  font-weight:800;
+  color:var(--primary);
+  text-decoration:none;
+  font-size:20px;
+}
+.nav a{
+  margin-left:18px;
+  color:#374151;
+  text-decoration:none;
+  font-weight:600;
+}
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:none;
+  font-size:20px;
+  cursor:pointer;
+}
+
+/* Hero */
+.hero{
+  padding:48px 0;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:28px;
+  align-items:center;
+}
+.hero-text h1{
+  margin:0 0 12px 0;
+  font-size:32px;
+  line-height:1.05;
+}
+.lead{
+  margin:0 0 18px 0;
+  color:var(--muted);
+}
+.hero-cta .btn{margin-right:10px}
+.hero-card{
+  background:linear-gradient(180deg,#fff,#fbfdff);
+  border-radius:12px;
+  padding:18px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(2,6,23,0.06);
+}
+.avatar{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid rgba(0,0,0,0.06);
+  margin-bottom:10px;
+}
+.card-actions .btn{margin-right:8px}
+.muted{color:var(--muted)}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  background:var(--card);
+  color:var(--primary);
+  border:2px solid transparent;
+  font-weight:700;
+  cursor:pointer;
+}
+.btn.primary{
+  background:var(--primary);
+  color:#fff;
+}
+.btn.ghost{
+  background:transparent;
+  color:var(--primary);
+  border:2px solid var(--primary);
+}
+.btn.small{padding:6px 10px;font-size:14px}
+
+/* Skills */
+.section{padding:48px 0}
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-top:18px;
+}
+.skill{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,10,0.03);}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+.project-card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,10,0.03)}
+.project-actions{margin-top:12px}
+
+/* Notes demo */
+.notes-demo{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,10,0.03)}
+.input-row{display:flex;gap:10px;align-items:center}
+.input-row input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef8}
+#demoNotesList{list-style:none;padding:0;margin-top:12px}
+#demoNotesList li{background:#fff;padding:10px;border-radius:8px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+
+/* Contact */
+.contact-form{max-width:720px;margin-top:16px;background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,10,0.03)}
+.field-row{display:flex;gap:10px;margin-bottom:10px}
+.field-row input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef8}
+textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8}
+
+/* Footer */
+.site-footer{padding:20px 0;background:transparent;text-align:center;border-top:1px solid #e6eef8;margin-top:30px;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:1fr}
+  .nav a{display:none}
+  .nav-toggle{display:inline-block}
+  .nav.open a{display:inline-block;margin:8px 0}
+}
